@@ -6,7 +6,7 @@ using FivePD.API.Utils;
 
 namespace PersonWithKnife
 {
-    [CalloutProperties("Person med kniv", "GGGDunlix & översatt av Råven/Jackpro144", "0.1.0")]
+    [CalloutProperties("Person med kniv", "GGGDunlix & översatt av Råven/Jackpro144", "0.1.2")]
     public class PersonWithKnife : Callout
     {
         private Ped suspect;
@@ -35,7 +35,6 @@ namespace PersonWithKnife
             suspect = await SpawnPed(RandomUtils.GetRandomPed(), Location);
             suspect.AlwaysKeepTask = true;
             suspect.BlockPermanentEvents = true;
-            suspect.Armor = 2800;
 
             var weapons = new[]
             {
@@ -45,7 +44,7 @@ namespace PersonWithKnife
                 WeaponHash.Machete,
             };
             suspect.Weapons.Give(weapons[RandomUtils.Random.Next(weapons.Length)], int.MaxValue, true, true);
-
+            suspect.Armor = 0;
 
             suspect.AttachBlip();
             Tick += TaskKnife;

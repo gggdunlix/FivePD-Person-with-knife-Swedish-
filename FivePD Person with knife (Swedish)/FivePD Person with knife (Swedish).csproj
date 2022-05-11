@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <RootNamespace>FivePD_Person_with_knife__Swedish_</RootNamespace>
+    <AssemblyName>PersonWithKnife-SWEDISH-SVENSK-0.1.2.net</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
