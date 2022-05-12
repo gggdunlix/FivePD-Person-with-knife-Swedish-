@@ -54,7 +54,22 @@ namespace PersonWithKnife
 
         private async Task TaskKnife()
         {
-            suspect.Task.FightAgainst(Game.PlayerPed);
+            if (suspect.Weapons.HasWeapon(WeaponHash.Knife))
+            {
+                suspect.Task.FightAgainst(Game.PlayerPed);
+            }
+            if (suspect.Weapons.HasWeapon(WeaponHash.SwitchBlade))
+            {
+                suspect.Task.FightAgainst(Game.PlayerPed);
+            }
+            if (suspect.Weapons.HasWeapon(WeaponHash.Dagger))
+            {
+                suspect.Task.FightAgainst(Game.PlayerPed);
+            }
+            if (suspect.Weapons.HasWeapon(WeaponHash.Machete))
+            {
+                suspect.Task.FightAgainst(Game.PlayerPed);
+            }
         }
     }
 }
